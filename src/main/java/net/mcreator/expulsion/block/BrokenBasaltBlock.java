@@ -2,8 +2,6 @@
 package net.mcreator.expulsion.block;
 
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemUsage;
-import net.minecraft.item.ItemUsageContext;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.block.Material;
 import net.minecraft.state.property.DirectionProperty;
