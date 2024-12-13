@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "expulsion:block/indigo_planks_slab"
+    },
+    "type=double": {
+      "model": "expulsion:block/indigo_planks"
+    },
+    "type=top": {
+      "model": "expulsion:block/indigo_planks_slab_top"
+    }
+  }
+}

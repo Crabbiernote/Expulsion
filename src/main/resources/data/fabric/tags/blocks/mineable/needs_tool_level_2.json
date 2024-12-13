@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "expulsion:indigo_bricks",
+    "expulsion:broken_basalt",
+    "expulsion:indigo_lantern",
+    "expulsion:indigo_pillar",
+    "expulsion:indigo_brick_slab",
+    "expulsion:chiseled_indigo_bricks",
+    "expulsion:chiseled_indigo_pillar",
+    "expulsion:activated_chiseled_indigo_pillar",
+    "expulsion:indigo_chain",
+    "expulsion:indigo_brick_stairs",
+    "expulsion:indigo_brick_wall"
+  ]
+}

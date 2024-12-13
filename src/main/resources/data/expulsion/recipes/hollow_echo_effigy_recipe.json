@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "2": {
+      "item": "expulsion:indigo_dust"
+    },
+    "4": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "5": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "6": {
+      "item": "minecraft:soul_soil"
+    }
+  },
+  "result": {
+    "item": "expulsion:hollow_effigy",
+    "count": 1
+  }
+}

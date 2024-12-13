@@ -1,0 +1,7 @@
+{
+  "parent": "expulsion:custom/dissonantechomodel",
+  "textures": {
+    "0": "expulsion:block/dissonantechotexture",
+    "particle": "expulsion:items/grievancespear"
+  }
+}

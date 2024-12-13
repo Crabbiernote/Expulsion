@@ -1,0 +1,29 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mcreator.expulsion.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractClientPlayerEntityMixin",
+    "ClientCommandSourceMixin",
+    "EntityArgumentTypeMixin",
+    "ExampleMixin",
+    "ExpulsionModRepairItemRecipeMixin",
+    "LivingEntityMixin",
+    "LivingEntityRendererMixin",
+    "MilkBucketItemMixin",
+    "PlayerAdvancementTrackerMixin",
+    "PlayerEntityMixin",
+    "PlayerEntityRendererMixin",
+    "PlayerListHudMixin",
+    "PlayerManagerMixin",
+    "ServerCommandSourceMixin",
+    "ServerPlayerEntityMixin",
+    "SocialInteractionsManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+  ]
+}

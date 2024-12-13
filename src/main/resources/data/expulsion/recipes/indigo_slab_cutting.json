@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "expulsion:indigo_bricks"
+  },
+  "result": "expulsion:indigo_brick_slab"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "expulsion:block/indigoplanks",
+    "up": "expulsion:block/indigoplanks",
+    "north": "expulsion:block/indigoplanks",
+    "east": "expulsion:block/indigoplanks",
+    "south": "expulsion:block/indigoplanks",
+    "west": "expulsion:block/indigoplanks",
+    "particle": "expulsion:block/indigoplanks"
+  }
+}

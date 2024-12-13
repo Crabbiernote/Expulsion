@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "expulsion:indigo_bricks"
+    },
+    "1": {
+      "item": "expulsion:indigo_bricks"
+    },
+    "2": {
+      "item": "expulsion:indigo_bricks"
+    }
+  },
+  "result": {
+    "item": "expulsion:indigo_brick_slab",
+    "count": 6
+  }
+}

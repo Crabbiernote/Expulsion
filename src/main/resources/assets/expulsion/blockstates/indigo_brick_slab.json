@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "expulsion:block/indigo_brick_slab" },
+    "type=top": { "model": "expulsion:block/indigo_brick_slab_top" },
+    "type=double": { "model": "expulsion:block/indigo_bricks" }
+  }
+}

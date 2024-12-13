@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "expulsion:indigo_brick_slab"
+    },
+    "1": {
+      "item": "minecraft:soul_lantern"
+    },
+    "2": {
+      "item": "expulsion:indigo_brick_slab"
+    }
+  },
+  "result": {
+    "item": "expulsion:indigo_lantern",
+    "count": 1
+  }
+}

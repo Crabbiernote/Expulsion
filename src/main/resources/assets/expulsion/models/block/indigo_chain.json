@@ -1,0 +1,9 @@
+{
+  "parent": "expulsion:custom/indigochainmodel2",
+  "textures": {
+    "all": "expulsion:block/chain2",
+    "particle": "expulsion:block/chain2",
+    "0": "expulsion:block/chain1",
+    "1": "expulsion:block/chain2"
+  }
+}

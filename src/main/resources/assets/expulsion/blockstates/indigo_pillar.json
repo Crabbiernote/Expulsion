@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "expulsion:block/indigo_pillar",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "expulsion:block/indigo_pillar"
+    },
+    "axis=z": {
+      "model": "expulsion:block/indigo_pillar",
+      "x": 90
+    }
+  }
+}

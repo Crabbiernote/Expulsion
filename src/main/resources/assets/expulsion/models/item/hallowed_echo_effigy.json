@@ -1,0 +1,7 @@
+{
+  "parent": "expulsion:custom/echoeffigymodel",
+  "textures": {
+    "layer0": "expulsion:items/hallowedechoeffigy",
+    "particle": "expulsion:items/hallowedechoeffigy"
+  }
+}

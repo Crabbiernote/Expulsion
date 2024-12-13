@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "expulsion:block/chiseledindigobricks",
+    "up": "expulsion:block/chiseledindigobricks",
+    "north": "expulsion:block/chiseledindigobricks",
+    "east": "expulsion:block/chiseledindigobricks",
+    "south": "expulsion:block/chiseledindigobricks",
+    "west": "expulsion:block/chiseledindigobricks",
+    "particle": "expulsion:block/chiseledindigobricks"
+  }
+}

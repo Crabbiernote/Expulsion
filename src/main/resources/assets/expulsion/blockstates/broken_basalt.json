@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "expulsion:block/broken_basalt"
+    },
+    "facing=east": {
+      "model": "expulsion:block/broken_basalt",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "expulsion:block/broken_basalt",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "expulsion:block/broken_basalt",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "expulsion:block/broken_basalt",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "expulsion:block/broken_basalt",
+      "x": 90
+    }
+  }
+}

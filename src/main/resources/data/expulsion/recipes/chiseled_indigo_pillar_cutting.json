@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "expulsion:indigo_pillar"
+  },
+  "result": "expulsion:chiseled_indigo_pillar"
+}
