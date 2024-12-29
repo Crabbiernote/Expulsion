@@ -51,9 +51,9 @@ public class RockHammerRightclickedOnBlockProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.BASALT) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BASALT) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = ExpulsionModBlocks.BROKEN_BASALT.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getEntries().entrySet()) {

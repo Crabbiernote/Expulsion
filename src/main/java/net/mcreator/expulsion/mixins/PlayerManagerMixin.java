@@ -4,7 +4,6 @@ import net.mcreator.expulsion.ExpulsionMod;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.network.ClientConnection;
-import net.minecraft.network.message.MessageSourceProfile;
 import net.minecraft.network.message.MessageType;
 import net.minecraft.network.message.SignedMessage;
 import net.minecraft.server.PlayerManager;
@@ -26,7 +25,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 @Mixin(PlayerManager.class)
-public abstract class PlayerManagerMixin {
+public abstract class  PlayerManagerMixin {
 
     @Shadow @Final private List<ServerPlayerEntity> players;
     @WrapWithCondition(method = "onPlayerConnect", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/PlayerManager;broadcast(Lnet/minecraft/text/Text;Z)V"))
@@ -43,8 +42,8 @@ public abstract class PlayerManagerMixin {
             }
         }
     }
-    @Inject(method = "broadcast(Lnet/minecraft/network/message/SignedMessage;Ljava/util/function/Predicate;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageSourceProfile;Lnet/minecraft/network/message/MessageType$Parameters;)V", at = @At("HEAD"), cancellable = true)
-    private void eplayers$noBroadcasty(SignedMessage message, Predicate<ServerPlayerEntity> shouldSendFiltered, @Nullable ServerPlayerEntity sender, MessageSourceProfile sourceProfile, MessageType.Parameters params, CallbackInfo ci) {
+    @Inject(method = "Lnet/minecraft/server/PlayerManager;broadcast(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)V", at = @At("HEAD"), cancellable = true)
+    private void eplayers$noBroadcasty(SignedMessage message, ServerPlayerEntity sender, MessageType.Parameters params, CallbackInfo ci) {
         if (message.getContent().getString().startsWith("/")) return;
         if (sender == null) return;
         if (ExpulsionMod.bannedUuids.contains(sender.getUuid())) {

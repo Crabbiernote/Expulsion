@@ -24,13 +24,13 @@ public class GoingGhost<T> {
                     if (ExpulsionMod.bannedUuids.contains(Objects.requireNonNull(context.getSource().getPlayer()).getUuid())) {
                         isGhost = !isGhost;
                         if (isGhost) {
-                            context.getSource().sendFeedback(Text.literal("you are ghost now lmao"), false);
+                            context.getSource().sendFeedback(() -> Text.literal("you are ghost now lmao"), false);
                         } else {
-                            context.getSource().sendFeedback(Text.literal("you are not ghost now lmao"), false);
+                            context.getSource().sendFeedback(() -> Text.literal("you are not ghost now lmao"), false);
                         }
                     }
 
-                    context.getSource().sendFeedback(Text.literal("Going Ghost"), false);
+                    context.getSource().sendFeedback(() -> Text.literal("Going Ghost"), false);
 
                     return 0;
                 })
@@ -44,9 +44,7 @@ public class GoingGhost<T> {
                                 if (targetPlayer != null && sourcePlayer != null) {
                                     BlockPos targetBlockPos = targetPlayer.getBlockPos();
                                     BlockPos sourceBlockPos = sourcePlayer.getBlockPos();
-                                    net.minecraft.util.registry.RegistryKey<World> playerDimension = targetPlayer.getWorld().getRegistryKey();
-                                    net.minecraft.util.registry.RegistryKey<World> sourceDimension = sourcePlayer.getWorld().getRegistryKey();
-                                    context.getSource().sendFeedback(Text.literal(playerName + " is at ")
+                                    context.getSource().sendFeedback(() -> Text.literal(playerName + " is at ")
                                             .append(Text.literal(targetBlockPos.getX() + ", " + targetBlockPos.getY() + ", " + targetBlockPos.getZ())), false);
                                 } else {
                                     context.getSource().sendError(Text.literal("Player not found"));

@@ -7,7 +7,6 @@ public class ExpulsionModDataGenerator implements DataGeneratorEntrypoint {
 
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        fabricDataGenerator.addProvider(ExpulsionRecipeGenerator::new);
 
     }
 }

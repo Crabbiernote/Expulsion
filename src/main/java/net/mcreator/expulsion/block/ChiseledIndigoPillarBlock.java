@@ -1,11 +1,11 @@
 
 package net.mcreator.expulsion.block;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.loot.context.LootContext;
-import net.minecraft.block.Material;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.StateManager;
@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class ChiseledIndigoPillarBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
 	public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
 
 	public ChiseledIndigoPillarBlock() {
@@ -68,14 +68,6 @@ public class ChiseledIndigoPillarBlock extends Block {
 			}
 		}
 		return state;
-	}
-
-	@Override
-	public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 
 	@Override

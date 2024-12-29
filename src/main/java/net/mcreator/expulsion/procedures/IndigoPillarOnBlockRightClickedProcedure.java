@@ -51,7 +51,7 @@ public class IndigoPillarOnBlockRightClickedProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getItem() == ExpulsionModItems.ROCK_HAMMER) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = ExpulsionModBlocks.CHISELED_INDIGO_PILLAR.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getEntries().entrySet()) {
@@ -76,7 +76,6 @@ public class IndigoPillarOnBlockRightClickedProcedure {
 							_be.readNbt(_bnbt);
 						} catch (Exception ignored) {
 						}
-
 					}
 				}
 			}

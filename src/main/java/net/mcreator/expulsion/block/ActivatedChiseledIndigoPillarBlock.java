@@ -1,11 +1,10 @@
 
 package net.mcreator.expulsion.block;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.loot.context.LootContext;
-import net.minecraft.block.Material;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.StateManager;
@@ -35,7 +34,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class ActivatedChiseledIndigoPillarBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).lightLevel(s -> 9).requiresTool();
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).lightLevel(s -> 9).requiresTool();
 	public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
 
 	public ActivatedChiseledIndigoPillarBlock() {
@@ -75,13 +74,6 @@ public class ActivatedChiseledIndigoPillarBlock extends Block {
 		return new ItemStack(ExpulsionModBlocks.CHISELED_INDIGO_PILLAR);
 	}
 
-	@Override
-	public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ExpulsionModBlocks.CHISELED_INDIGO_PILLAR));
-	}
 
 	@Override
 	public ActionResult onUse(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockHitResult hit) {

@@ -48,7 +48,7 @@ public class BrokenBasaltBlockAddedProcedure {
 					this.ticks++;
 					if (this.ticks == 1200) {
 						{
-							BlockPos _bp = new BlockPos(x, y, z);
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							if (world.getBlockState(_bp).getBlock() == ExpulsionModBlocks.BROKEN_BASALT) {
 							BlockState _bs = Blocks.BASALT.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);

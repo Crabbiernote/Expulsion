@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AbstractClientPlayerEntity.class)
 public abstract class AbstractClientPlayerEntityMixin extends PlayerEntity {
     public AbstractClientPlayerEntityMixin(World world, BlockPos pos, float yaw, GameProfile profile) {
-        super(world, pos, yaw, profile, null);
+        super(world, pos, yaw, profile);
     }
     @Override
     public boolean shouldRender(double cameraX, double cameraY, double cameraZ) {

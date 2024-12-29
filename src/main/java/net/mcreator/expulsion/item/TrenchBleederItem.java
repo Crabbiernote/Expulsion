@@ -38,6 +38,6 @@ public class TrenchBleederItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.8f, new Item.Settings().group(null).fireproof());
+		}, 3, -2.8f, new Item.Settings().fireproof());
 	}
 }

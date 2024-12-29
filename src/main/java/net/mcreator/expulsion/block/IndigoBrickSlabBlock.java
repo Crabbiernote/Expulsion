@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class IndigoBrickSlabBlock extends SlabBlock implements Waterloggable {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
 			.solidBlock((bs, br, bp) -> false);
 	public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -65,7 +65,7 @@ public class IndigoBrickSlabBlock extends SlabBlock implements Waterloggable {
 			// For 1.17 and below:
 			// world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 			// For versions since 1.18 below 1.21.2:
-			world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+			world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 		}
 
 		return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
@@ -75,13 +75,6 @@ public class IndigoBrickSlabBlock extends SlabBlock implements Waterloggable {
 	public BlockState getPlacementState(ItemPlacementContext context) {
 		return super.getPlacementState(context)
 				.with(WATERLOGGED, context.getWorld().getFluidState(context.getBlockPos()).getFluid() == Fluids.WATER);
-	}
-	@Override
-	public List <ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
-		List <ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 }
 

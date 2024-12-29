@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class ChiseledIndigoPillarOnBlockRightClickedProcedure {
 
-	public static <Entity> void execute(Map<String, Object> dependencies) {
+	public static void execute(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				ExpulsionMod.LOGGER.warn("Failed to load dependency world for procedure ChiseledIndigoPillarOnBlockRightClicked!");
@@ -51,7 +51,7 @@ public class ChiseledIndigoPillarOnBlockRightClickedProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getItem() == ExpulsionModItems.HOLLOW_EFFIGY) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = new BlockPos((int)x, (int)y, (int)z);
 				BlockState _bs = ExpulsionModBlocks.ACTIVATED_CHISELED_INDIGO_PILLAR.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getEntries().entrySet()) {

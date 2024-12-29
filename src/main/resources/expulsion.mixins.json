@@ -8,7 +8,6 @@
     "ClientCommandSourceMixin",
     "EntityArgumentTypeMixin",
     "ExampleMixin",
-    "ExpulsionModRepairItemRecipeMixin",
     "LivingEntityMixin",
     "LivingEntityRendererMixin",
     "MilkBucketItemMixin",

@@ -1,10 +1,11 @@
 
 package net.mcreator.expulsion.block;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.loot.context.LootContext;
-import net.minecraft.block.Material;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.block.Block;
 import net.minecraft.world.BlockView;
@@ -23,7 +24,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class IndigoPlanksBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(1.5f, 50f);
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOD).strength(1.5f, 50f);
 
 	public IndigoPlanksBlock() {
 		super(PROPERTIES);
@@ -35,7 +36,7 @@ public class IndigoPlanksBlock extends Block {
 	}
 
 	@Override
-	public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
+	public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;

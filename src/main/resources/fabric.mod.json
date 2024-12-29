@@ -31,8 +31,8 @@
 		"expulsion.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.9",
-		"minecraft": "~1.19.2",
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

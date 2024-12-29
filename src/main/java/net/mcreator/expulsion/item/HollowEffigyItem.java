@@ -11,7 +11,7 @@ import net.minecraft.util.Hand;
 
 public class HollowEffigyItem extends Item {
 	public HollowEffigyItem() {
-		super(new Item.Settings().group(null).maxCount(1).fireproof().rarity(Rarity.RARE));
+		super(new Item.Settings().maxCount(1).fireproof().rarity(Rarity.RARE));
 	}
 
 	@Override

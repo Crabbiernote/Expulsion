@@ -2,11 +2,14 @@
 package net.mcreator.expulsion.block;
 
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.loot.context.LootContextParameter;
+import net.minecraft.loot.context.LootContextParameterSet;
+import net.minecraft.loot.context.LootContextParameters;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.loot.context.LootContext;
-import net.minecraft.block.Material;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.StateManager;
@@ -34,9 +37,22 @@ import java.util.Collections;
 import static net.minecraft.util.math.Direction.Axis.*;
 
 public class IndigoChainBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.METAL).requiresTool().sounds(BlockSoundGroup.CHAIN).strength(2.5f, 100f).requiresTool().nonOpaque()
+	public static final AbstractBlock.Settings PROPERTIES = FabricBlockSettings.create()
+			.sounds(BlockSoundGroup.CHAIN)
+			.strength(2.5f, 100f)
+			.requiresTool()
+			.nonOpaque()
 			.solidBlock((bs, br, bp) -> false);
+
 	public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
+
+	@Override
+	public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+			List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
+			if (!dropsOriginal.isEmpty())
+					return dropsOriginal;
+			return Collections.singletonList(new ItemStack(this, 1));
+	}
 
 	public IndigoChainBlock() {
 		super(PROPERTIES);
@@ -44,7 +60,7 @@ public class IndigoChainBlock extends Block {
 	}
 
 	@Override
-	public boolean isTranslucent(BlockState state, BlockView reader, BlockPos pos) {
+	public boolean isTransparent(BlockState state, BlockView reader, BlockPos pos) {
 		return true;
 	}
 
@@ -85,13 +101,6 @@ public class IndigoChainBlock extends Block {
 		return state;
 	}
 
-	@Override
-	public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
-	}
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {

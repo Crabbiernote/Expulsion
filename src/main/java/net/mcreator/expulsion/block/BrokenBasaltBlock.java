@@ -1,9 +1,10 @@
 
 package net.mcreator.expulsion.block;
 
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.loot.context.LootContext;
-import net.minecraft.block.Material;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.StateManager;
 import net.minecraft.block.BlockState;
@@ -33,7 +34,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class BrokenBasaltBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of(Material.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of().requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
 	public static final DirectionProperty FACING = FacingBlock.FACING;
 
 	public BrokenBasaltBlock() {
@@ -64,13 +65,6 @@ public class BrokenBasaltBlock extends Block {
 		return state.rotate(mirrorIn.getRotation(state.get(FACING)));
 	}
 
-	@Override
-	public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDroppedStacks(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(Blocks.BASALT));
-	}
 
 	@Override
 	public void onBlockAdded(BlockState blockstate, World world, BlockPos pos, BlockState oldState, boolean moving) {

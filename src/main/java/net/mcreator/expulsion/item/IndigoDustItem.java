@@ -25,7 +25,7 @@ import static net.mcreator.expulsion.ClientInit.shaderActive2;
 
 public class IndigoDustItem extends Item {
 	public IndigoDustItem() {
-		super(new Item.Settings().group(ExpulsionModTabs.TAB_EXPULSION).maxCount(64).rarity(Rarity.COMMON)
+		super(new Item.Settings().maxCount(64).rarity(Rarity.COMMON)
 				.food(new FoodComponent.Builder().hunger(0).saturationModifier(0.1f).alwaysEdible().snack().build()));
 	}
 

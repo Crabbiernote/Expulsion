@@ -6,7 +6,7 @@ import net.minecraft.util.Rarity;
 
 public class HallowedEchoEffigyItem extends Item {
     public HallowedEchoEffigyItem() {
-        super(new Item.Settings().group(null).maxCount(1).fireproof().rarity(Rarity.RARE));
+        super(new Item.Settings().maxCount(1).fireproof().rarity(Rarity.RARE));
     }
 
     @Override

@@ -28,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  */
 public abstract class ServerPlayerEntityMixin extends PlayerEntity {
     public ServerPlayerEntityMixin(World world, BlockPos blockPos, float f, GameProfile gameProfile, @Nullable PlayerPublicKey playerPublicKey) {
-        super(world, blockPos, f, gameProfile, playerPublicKey);
+        super(world, blockPos, f, gameProfile);
     }
 
     @ModifyVariable(method = "onDeath", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/entity/damage/DamageTracker;getDeathMessage()Lnet/minecraft/text/Text;"), index = 3)

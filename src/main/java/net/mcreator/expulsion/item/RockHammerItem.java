@@ -30,7 +30,7 @@ import java.util.List;
 
 public class RockHammerItem extends Item {
 	public RockHammerItem() {
-		super(new Item.Settings().group(ExpulsionModTabs.TAB_EXPULSION).maxCount(1).fireproof().rarity(Rarity.COMMON));
+		super(new Item.Settings().maxCount(1).fireproof().rarity(Rarity.COMMON));
 	}
 
 	@Override
