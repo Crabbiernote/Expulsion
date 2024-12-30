@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class IndigoLanternBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).lightLevel(s -> 11).requiresTool()
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).luminance(s -> 11).requiresTool()
 			.postProcess((bs, br, bp) -> true).emissiveLighting((bs, br, bp) -> true);
 
 	public IndigoLanternBlock() {

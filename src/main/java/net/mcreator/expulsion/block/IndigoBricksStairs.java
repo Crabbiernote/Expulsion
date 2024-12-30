@@ -10,8 +10,6 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -20,11 +18,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-import java.util.Collections;
-import java.util.List;
-
 public class IndigoBricksStairs extends StairsBlock implements Waterloggable {
-    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks .STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque().solidBlock((bs, br, bp) -> false);
+    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque().solidBlock((bs, br, bp) -> false);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public IndigoBricksStairs() {

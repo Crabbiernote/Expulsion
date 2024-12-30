@@ -14,14 +14,8 @@ import net.minecraft.util.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
-import net.mcreator.expulsion.init.ExpulsionModTabs;
 
 import net.minecraft.world.World;
-
-import java.sql.SQLOutput;
-
-import static net.mcreator.expulsion.ClientInit.INDIGO_SHIFT;
-import static net.mcreator.expulsion.ClientInit.shaderActive2;
 
 public class IndigoDustItem extends Item {
 	public IndigoDustItem() {

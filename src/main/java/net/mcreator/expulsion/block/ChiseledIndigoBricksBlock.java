@@ -7,7 +7,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.block.Block;
 import net.minecraft.world.BlockView;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.client.render.RenderLayer;
 
@@ -17,9 +16,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
-
-import java.util.List;
-import java.util.Collections;
 
 public class ChiseledIndigoBricksBlock extends Block {
 	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();

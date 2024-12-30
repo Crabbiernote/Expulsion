@@ -11,7 +11,6 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
@@ -25,7 +24,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class IndigoPlanksStairs extends StairsBlock implements Waterloggable {
-    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque().solidBlock((bs, br, bp) -> false);
+    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque().solidBlock((bs, br, bp) -> false);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
 

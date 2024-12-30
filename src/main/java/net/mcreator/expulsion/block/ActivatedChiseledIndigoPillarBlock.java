@@ -30,11 +30,9 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import java.util.List;
-import java.util.Collections;
 
 public class ActivatedChiseledIndigoPillarBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).lightLevel(s -> 9).requiresTool();
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).luminance(s -> 9).requiresTool();
 	public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
 
 	public ActivatedChiseledIndigoPillarBlock() {

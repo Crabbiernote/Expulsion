@@ -4,27 +4,20 @@ package net.mcreator.expulsion.item;
 import net.mcreator.expulsion.init.ExpulsionModBlocks;
 import net.mcreator.expulsion.init.ExpulsionModItems;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.pattern.CachedBlockPosition;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Arm;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.util.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.util.ActionResult;
 import net.minecraft.text.Text;
-
-import net.mcreator.expulsion.procedures.RockHammerRightclickedOnBlockProcedure;
-import net.mcreator.expulsion.init.ExpulsionModTabs;
 
 import java.util.List;
 

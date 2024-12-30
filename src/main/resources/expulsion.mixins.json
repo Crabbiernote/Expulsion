@@ -10,7 +10,6 @@
     "ExampleMixin",
     "LivingEntityMixin",
     "LivingEntityRendererMixin",
-    "MilkBucketItemMixin",
     "PlayerAdvancementTrackerMixin",
     "PlayerEntityMixin",
     "PlayerEntityRendererMixin",
@@ -24,5 +23,6 @@
     "defaultRequire": 1
   },
   "client": [
+    "MilkBucketItemMixin"
   ]
 }

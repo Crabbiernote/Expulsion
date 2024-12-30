@@ -1,22 +1,15 @@
 package net.mcreator.expulsion.mixins;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.mcreator.expulsion.ExpulsionMod;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.PlayerListHud;
 import net.minecraft.client.network.PlayerListEntry;
-import net.minecraft.scoreboard.Scoreboard;
-import net.minecraft.scoreboard.ScoreboardObjective;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Mixin(PlayerListHud.class)
 public abstract class PlayerListHudMixin {
@@ -27,12 +20,13 @@ public abstract class PlayerListHudMixin {
    //     List<PlayerListEntry> list = this.collectPlayerEntries();
   //      list.removeIf((entry) -> ExpulsionMod.bannedUuids.contains(entry.getProfile().getId()));
    //     return (PlayerListHud) list;
-  //  }
+ //   }
     // tbh idk why i even bothered to try this thing up here im just keeping it to remind me of my failures
-    @Inject(method = "collectPlayerEntries", at = @At("HEAD"))
-        private void pleaseletthisworkiwillcry(CallbackInfoReturnable<List<PlayerListEntry>> cir){
-        List<PlayerListEntry> list = this.collectPlayerEntries();
-        list.removeIf((entry) -> ExpulsionMod.bannedUuids.contains(entry.getProfile().getId()));
-
-    }
+@ModifyReturnValue(method = "collectPlayerEntries", at = @At("RETURN"))
+    private List<PlayerListEntry> innominepatrisetfiliietspiritussancti (List<PlayerListEntry> original) {
+    return original.stream()
+            .filter(entry -> !ExpulsionMod.bannedUuids.contains(entry.getProfile().getId()))
+            .collect(Collectors.toList());
+}
+   
 }

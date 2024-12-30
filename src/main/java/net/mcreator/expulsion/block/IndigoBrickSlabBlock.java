@@ -1,46 +1,22 @@
 
 package net.mcreator.expulsion.block;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.SlabType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.block.BlockState;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.world.World;
-import net.minecraft.world.BlockView;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.math.BlockPos;
-
-
-import net.mcreator.expulsion.init.ExpulsionModBlocks;
-
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.api.Environment;
-import net.fabricmc.api.EnvType;
 import net.minecraft.world.WorldAccess;
 
-import java.util.List;
-import java.util.Collections;
-
 public class IndigoBrickSlabBlock extends SlabBlock implements Waterloggable {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
 			.solidBlock((bs, br, bp) -> false);
 	public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 

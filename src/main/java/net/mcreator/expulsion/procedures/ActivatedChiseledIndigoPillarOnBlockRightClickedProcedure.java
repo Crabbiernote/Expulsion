@@ -3,7 +3,6 @@ package net.mcreator.expulsion.procedures;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;

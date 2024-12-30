@@ -2,7 +2,6 @@
 package net.mcreator.expulsion.block;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.loot.context.LootContextParameterSet;

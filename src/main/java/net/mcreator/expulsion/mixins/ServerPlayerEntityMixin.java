@@ -2,17 +2,11 @@ package net.mcreator.expulsion.mixins;
 
 import net.mcreator.expulsion.ExpulsionMod;
 import com.mojang.authlib.GameProfile;
-import net.mcreator.expulsion.init.ExpulsionModItems;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.network.encryption.PlayerPublicKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.LiteralTextContent;
 import net.minecraft.text.Text;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;

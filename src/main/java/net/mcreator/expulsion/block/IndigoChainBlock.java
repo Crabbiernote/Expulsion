@@ -1,23 +1,16 @@
 
 package net.mcreator.expulsion.block;
 
+import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.loot.context.LootContextParameter;
 import net.minecraft.loot.context.LootContextParameterSet;
-import net.minecraft.loot.context.LootContextParameters;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.StateManager;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.block.Block;
 import net.minecraft.world.BlockView;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Direction;
@@ -37,7 +30,7 @@ import java.util.Collections;
 import static net.minecraft.util.math.Direction.Axis.*;
 
 public class IndigoChainBlock extends Block {
-	public static final AbstractBlock.Settings PROPERTIES = FabricBlockSettings.create()
+	public static final AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.CHAIN)
 			.sounds(BlockSoundGroup.CHAIN)
 			.strength(2.5f, 100f)
 			.requiresTool()

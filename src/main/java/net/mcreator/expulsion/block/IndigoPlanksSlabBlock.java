@@ -15,7 +15,6 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.block.BlockState;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Direction;
@@ -29,7 +28,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class IndigoPlanksSlabBlock extends SlabBlock implements Waterloggable {
-    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
+    public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.OAK_SLAB).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool().nonOpaque()
             .solidBlock((bs, br, bp) -> false);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 

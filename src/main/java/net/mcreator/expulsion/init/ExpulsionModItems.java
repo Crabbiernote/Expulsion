@@ -3,10 +3,8 @@
  *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.mcreator.expulsion.init;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.mcreator.expulsion.item.*;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;

@@ -1,10 +1,7 @@
 
 package net.mcreator.expulsion.block;
 
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.loot.context.LootContext;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.StateManager;
 import net.minecraft.block.BlockState;
@@ -17,7 +14,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.BlockView;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.client.render.RenderLayer;
@@ -30,11 +26,9 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import java.util.List;
-import java.util.Collections;
 
 public class BrokenBasaltBlock extends Block {
-	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.of().requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
+	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.BASALT).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();
 	public static final DirectionProperty FACING = FacingBlock.FACING;
 
 	public BrokenBasaltBlock() {

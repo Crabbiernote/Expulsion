@@ -7,7 +7,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.block.Block;
 import net.minecraft.world.BlockView;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.client.render.RenderLayer;
 

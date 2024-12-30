@@ -1,6 +1,5 @@
 package net.mcreator.expulsion.Datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.mcreator.expulsion.init.ExpulsionModBlocks;

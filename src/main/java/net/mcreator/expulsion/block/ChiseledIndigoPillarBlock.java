@@ -5,7 +5,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.StateManager;
@@ -16,7 +15,6 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.BlockView;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Direction;
@@ -30,9 +28,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
-
-import java.util.List;
-import java.util.Collections;
 
 public class ChiseledIndigoPillarBlock extends Block {
 	public static AbstractBlock.Settings PROPERTIES = FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().sounds(BlockSoundGroup.STONE).strength(2.5f, 100f).requiresTool();

@@ -20,6 +20,17 @@ repositories {
 			includeGroupByRegex 'dev\\.onyxstudios.*'
 		}
 	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 dependencies {
@@ -34,6 +45,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modLocalRuntime "maven.modrinth:yjgIrBjZ:${authme_version}"
+	modLocalRuntime "maven.modrinth:9s6osm5g:11.1.136+fabric"
+	modLocalRuntime "maven.modrinth:modmenu:7.0.1"
 
 
 	processResources {
